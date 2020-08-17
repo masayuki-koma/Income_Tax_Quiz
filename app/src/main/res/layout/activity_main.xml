@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,6 +14,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,7 +84,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15問ランダムチャレンジ"
+                        android:text="復習チャレンジ"
                         android:textStyle="bold"
                         android:padding="10dp"
                         />
@@ -88,7 +92,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ランダムに15問出題されます"
+                        android:text="間違えた問のみ出題"
                         android:gravity="center"
                         android:padding="5dp"/>
                 </LinearLayout>
@@ -110,84 +114,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15問ランダムチャレンジ"
+                        android:text="復習解答"
                         android:textStyle="bold"
                         android:padding="10dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ランダムに15問出題されます"
-                        android:gravity="center"
-                        android:padding="5dp"/>
-                    />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:clipToPadding="false"
-            >
-            <androidx.cardview.widget.CardView
-                android:layout_width="160dp"
-                android:layout_height="190dp"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/trees"
-                        android:background="@drawable/cardimagebackground"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15問ランダムチャレンジ"
-                        android:textStyle="bold"
-                        android:padding="10dp"
-
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ランダムに15問出題されます"
-                        android:gravity="center"
-                        android:padding="5dp"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="160dp"
-                android:layout_height="190dp"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/trees"
-                        android:background="@drawable/cardimagebackground"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15問ランダムチャレンジ"
-                        android:textStyle="bold"
-                        android:padding="10dp"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ランダムに15問出題されます"
+                        android:text="問題と解答を確認"
                         android:gravity="center"
                         android:padding="5dp"/>
                     />
@@ -218,15 +152,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15問ランダムチャレンジ"
+                        android:text="全問チャレンジ"
                         android:textStyle="bold"
                         android:padding="10dp"
+
                         />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ランダムに15問出題されます"
+                        android:text="全ての問を出題"
                         android:gravity="center"
                         android:padding="5dp"/>
                 </LinearLayout>
@@ -248,7 +183,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15問ランダムチャレンジ"
+                        android:text="全問解答"
                         android:textStyle="bold"
                         android:padding="10dp"
                         />
@@ -256,7 +191,76 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ランダムに15問出題されます"
+                        android:text="全ての問と解答"
+                        android:gravity="center"
+                        android:padding="5dp"/>
+                    />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clipToPadding="false"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="190dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/trees"
+                        android:background="@drawable/cardimagebackground"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="重要問題チャレンジ"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="印をつけた問の出題"
+                        android:gravity="center"
+                        android:padding="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="190dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/trees"
+                        android:background="@drawable/cardimagebackground"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="重要問題解答"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="印の問と解答を確認"
                         android:gravity="center"
                         android:padding="5dp"/>
                     />
@@ -266,3 +270,15 @@
     </LinearLayout>
 
 </ScrollView>
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_launcher_foreground"
+        fab:fab_type="normal"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_colorRipple="@color/colorBackground" />
+</FrameLayout>
