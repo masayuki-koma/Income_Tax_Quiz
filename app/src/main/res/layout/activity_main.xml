@@ -29,6 +29,7 @@
             android:clipToPadding="false"
             >
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardRandom"
                 android:layout_width="350dp"
                 android:layout_height="190dp"
                 android:layout_margin="10dp">
